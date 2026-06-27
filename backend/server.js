@@ -8,8 +8,6 @@ import userRoutes from "./routes/userRoutes.js";
 import taskRoutes from "./routes/taskRoutes.js";
 
 dotenv.config();
-console.log("JWT_SECRET =", process.env.JWT_SECRET);
-
 connectDB();
 
 const app = express();
@@ -20,7 +18,10 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://taskmanager-garima.netlify.app",
+    ],
     credentials: true,
   })
 );
@@ -35,7 +36,7 @@ app.get("/", (req, res) => {
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
-app.use("/api/tasks",taskRoutes);
+app.use("/api/tasks", taskRoutes);
 
 const PORT = process.env.PORT || 5000;
 
