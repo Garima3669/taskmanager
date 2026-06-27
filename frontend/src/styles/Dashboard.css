@@ -1,0 +1,243 @@
+/* ================= DASHBOARD ================= */
+
+.dashboard{
+
+    padding:26px;
+
+    background:var(--bg);
+
+    min-height:100vh;
+
+}
+
+/* ================= HERO ================= */
+
+.dashboard-top{
+
+    display:grid;
+
+    grid-template-columns:1.7fr 1fr;
+
+    gap:22px;
+
+    align-items:start;
+
+    margin-bottom: 20px;
+
+}
+
+.left-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:3px;
+
+    height: 100%;
+
+}
+
+.right-panel{
+
+    display:flex;
+
+}
+
+.right-panel > *{
+
+    width:100%;
+
+    height:100%;
+
+}
+
+/* ================= ROW ================= */
+
+.dashboard-row{
+
+    display:grid;
+
+    gap:24px;
+
+    margin-bottom:24px;
+
+}
+
+/* Analytics Row */
+
+.analytics-row{
+
+    grid-template-columns:1.1fr 1.7fr;
+
+}
+
+/* Upcoming Row */
+
+.dashboard-row:not(.analytics-row){
+
+    grid-template-columns:1.6fr 1fr;
+
+}
+
+/* ================= CARD ================= */
+
+.dashboard-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:24px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ================= SEARCH ================= */
+
+.search-filter{
+
+    margin-bottom:24px;
+
+}
+
+/* ================= TASK GRID ================= */
+
+.task-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+
+    gap:22px;
+
+}
+
+/* ================= EMPTY ================= */
+
+.empty-task{
+
+    grid-column:1/-1;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:60px;
+
+    text-align:center;
+
+}
+
+.empty-task h2{
+
+    color:var(--text);
+
+    margin-bottom:12px;
+
+}
+
+.empty-task p{
+
+    color:var(--text2);
+
+}
+
+/* ================= LARGE DESKTOP ================= */
+
+@media(min-width:1600px){
+
+.dashboard{
+
+    max-width:1700px;
+
+    margin:auto;
+
+}
+
+.analytics-row{
+
+    grid-template-columns:1fr 1.8fr;
+
+}
+
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:992px){
+
+.dashboard-top{
+
+    grid-template-columns:1fr;
+
+}
+
+.analytics-row{
+
+    grid-template-columns:1fr;
+
+}
+
+.dashboard-row:not(.analytics-row){
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.dashboard{
+
+    padding:18px;
+
+}
+
+.dashboard-card{
+
+    padding:18px;
+
+}
+
+.task-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:480px){
+
+.dashboard{
+
+    padding:14px;
+
+}
+
+.dashboard-card{
+
+    padding:16px;
+
+}
+
+}

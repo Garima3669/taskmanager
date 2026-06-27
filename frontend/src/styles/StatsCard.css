@@ -1,0 +1,189 @@
+/* ================= WRAPPER ================= */
+
+.stats-wrapper{
+
+    width:100%;
+
+}
+
+/* ================= TITLE ================= */
+
+.stats-title{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+    margin-bottom:28px;
+
+}
+
+/* ================= GRID ================= */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+/* ================= CARD ================= */
+
+.stat-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:var(--card-hover);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ================= ICON ================= */
+
+.stat-icon{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:24px;
+
+    flex-shrink:0;
+
+}
+
+.stat-icon.blue{
+
+    background:#3b82f6;
+
+}
+
+.stat-icon.green{
+
+    background:#22c55e;
+
+}
+
+.stat-icon.orange{
+
+    background:#f59e0b;
+
+}
+
+.stat-icon.red{
+
+    background:#ef4444;
+
+}
+
+/* ================= INFO ================= */
+
+.stat-info{
+
+    flex:1;
+
+}
+
+.stat-info h4{
+
+    color:var(--text2);
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:6px;
+
+}
+
+.stat-info h2{
+
+    color:var(--text);
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:900px){
+
+.stats-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:500px){
+
+.stats-title{
+
+    font-size:24px;
+
+}
+
+.stat-card{
+
+    padding:18px;
+
+}
+
+.stat-icon{
+
+    width:55px;
+
+    height:55px;
+
+    font-size:20px;
+
+}
+
+.stat-info h2{
+
+    font-size:24px;
+
+}
+
+}

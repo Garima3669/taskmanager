@@ -1,0 +1,226 @@
+/* ==========================
+            HERO
+========================== */
+
+.hero {
+
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 30px;
+
+    min-height: 145px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        var(--hero-start),
+        var(--hero-end)
+    );
+
+    margin-bottom: 24px;
+
+    box-shadow: var(--shadow);
+
+    transition: .3s;
+}
+
+/* Decorative circles */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -100px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.10);
+}
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    bottom: -60px;
+    left: -40px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.07);
+}
+
+.hero>* {
+
+    position: relative;
+    z-index: 2;
+
+}
+
+/* ==========================
+          CONTENT
+========================== */
+
+.hero-content {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.hero h1 {
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: var(--hero-text);
+
+    line-height: 1.2;
+
+}
+
+.hero h1 span {
+
+    font-weight: 800;
+
+}
+
+.hero p {
+
+    font-size: 15px;
+
+    color: var(--hero-text);
+
+    opacity: .9;
+
+    line-height: 1.6;
+
+    max-width: 520px;
+
+}
+
+/* ==========================
+          BUTTON
+========================== */
+
+.hero-btn {
+
+    height: 52px;
+
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 14px;
+
+    background: var(--card);
+
+    color: var(--primary);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: .25s;
+}
+
+.hero-btn:hover {
+
+    background: var(--card-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.hero-btn svg {
+
+    font-size: 15px;
+
+}
+
+/* ==========================
+        RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.hero{
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 24px;
+
+    min-height: auto;
+
+}
+
+.hero h1{
+
+    font-size: 24px;
+
+}
+
+.hero p{
+
+    font-size: 14px;
+
+}
+
+.hero-btn{
+
+    width: 100%;
+
+    height: 48px;
+
+    justify-content: center;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.hero{
+
+    padding: 20px 18px;
+
+}
+
+.hero h1{
+
+    font-size: 22px;
+
+}
+
+.hero p{
+
+    font-size: 13px;
+
+}
+
+}

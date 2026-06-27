@@ -1,0 +1,182 @@
+/* ==========================
+        CARD
+========================== */
+
+.category-card{
+
+    width:100%;
+    min-height: 400px;
+
+}
+
+/* ==========================
+        HEADER
+========================== */
+
+.category-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.category-heading{
+
+    font-size:25px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+.category-count{
+
+    background:var(--card-hover);
+
+    border:1px solid var(--border);
+
+    color:var(--text2);
+
+    padding:10px 12px;
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+        LIST
+========================== */
+
+.category-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/* ==========================
+        ITEM
+========================== */
+
+.category-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.category-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+/* ==========================
+        BAR
+========================== */
+
+.progress-bar{
+
+    width:100%;
+
+    height:10px;
+
+    background:var(--card-hover);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    border-radius:20px;
+
+    transition:width .4s ease;
+
+}
+
+.progress-fill.work{
+
+    background:#2563eb;
+
+}
+
+.progress-fill.study{
+
+    background:#22c55e;
+
+}
+
+.progress-fill.personal{
+
+    background:#f59e0b;
+
+}
+
+.progress-fill.shopping{
+
+    background:#ef4444;
+
+}
+
+/* ==========================
+        MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.category-card{
+
+    min-height: 300px;
+
+}
+
+.category-heading{
+
+    font-size:18px;
+
+}
+
+.category-header{
+
+    font-size:12px;
+
+}
+
+.progress-bar{
+
+    height:7px;
+
+}
+
+}

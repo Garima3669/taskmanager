@@ -1,0 +1,392 @@
+/* ======================================================
+                    CALENDAR CARD
+====================================================== */
+
+.calendar-card{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: .3s;
+    height: 100%;
+}
+
+.calendar-card:hover{
+    border-color: var(--primary);
+}
+
+body.dark .calendar-card:hover{
+    border-color:#3b82f6;
+}
+
+/* ======================================================
+                        TITLE
+====================================================== */
+
+.calendar-card h3{
+    font-size:22px;
+    font-weight:700;
+    color:var(--text);
+}
+
+/* ======================================================
+                     CALENDAR
+====================================================== */
+
+.react-calendar{
+    width:100%;
+    border:none !important;
+    background:transparent !important;
+    color:var(--text);
+    font-family:inherit;
+}
+
+.react-calendar__navigation{
+    margin-bottom:15px;
+}
+
+.react-calendar__navigation button{
+    border-radius:10px;
+    background:none !important;
+    color:var(--text);
+    font-weight:600;
+    transition:.25s;
+}
+
+.react-calendar__navigation button:hover{
+    background:var(--card-hover) !important;
+}
+
+body.dark .react-calendar__navigation button:hover{
+    background:#334155 !important;
+}
+
+/* ======================================================
+                     WEEKDAYS
+====================================================== */
+
+.react-calendar__month-view__weekdays{
+    text-transform:uppercase;
+    font-size:12px;
+    color:var(--text2);
+    margin-bottom:8px;
+}
+
+.react-calendar__month-view__weekdays abbr{
+    text-decoration:none;
+}
+
+/* ======================================================
+                       DAYS
+====================================================== */
+
+.react-calendar__tile{
+    position:relative;
+    height:48px;
+    border-radius:10px;
+    color:var(--text);
+    background:transparent !important;
+    transition:.25s;
+    overflow:visible;
+}
+
+.react-calendar__tile:hover{
+    background:var(--card-hover) !important;
+}
+
+body.dark .react-calendar__tile:hover{
+    background:#334155 !important;
+}
+
+/* ======================================================
+                       TODAY
+====================================================== */
+
+.react-calendar__tile--now{
+    background:rgba(37,99,235,.12) !important;
+    color:var(--primary) !important;
+    font-weight:700;
+}
+
+body.dark .react-calendar__tile--now{
+    background:#1e3a8a !important;
+    color:#fff !important;
+}
+
+/* ======================================================
+                    ACTIVE DATE
+====================================================== */
+
+.react-calendar__tile--active{
+    background:var(--primary) !important;
+    color:#fff !important;
+}
+
+.react-calendar__tile--active:hover{
+    background:#1d4ed8 !important;
+}
+
+/* ======================================================
+                 PRIORITY DOT
+====================================================== */
+
+.task-dot-calendar{
+    position:absolute;
+    bottom:5px;
+    left:50%;
+    transform:translateX(-50%);
+    width:8px;
+    height:8px;
+    border-radius:50%;
+}
+
+.task-dot-calendar.high{
+    background:#ef4444;
+}
+
+.task-dot-calendar.medium{
+    background:#facc15;
+}
+
+.task-dot-calendar.low{
+    background:#22c55e;
+}
+
+/* ======================================================
+                 EVENTS SECTION
+====================================================== */
+
+.calendar-events{
+    border-top:1px solid var(--border);
+    padding-top:18px;
+}
+
+/* ======================================================
+                  HEADER
+====================================================== */
+
+.events-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+}
+
+.events-header h4{
+    color:var(--text);
+    font-size:17px;
+    font-weight:700;
+}
+
+.event-count{
+    background:rgba(37,99,235,.12);
+    color:var(--primary);
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+body.dark .event-count{
+    background:#1e3a8a;
+    color:white;
+}
+
+/* ======================================================
+                   TASK CARD
+====================================================== */
+
+.calendar-task{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    background:var(--card-hover);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:16px;
+    transition:.25s;
+}
+
+.calendar-task:hover{
+    transform:translateY(-2px);
+    border-color:var(--primary);
+}
+
+body.dark .calendar-task{
+    background:#1e293b;
+}
+
+body.dark .calendar-task:hover{
+    background:#334155;
+}
+
+/* ======================================================
+                   TASK LEFT
+====================================================== */
+
+.task-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.task-dot{
+    width:11px;
+    height:11px;
+    border-radius:50%;
+    flex-shrink:0;
+}
+
+.task-dot.high{
+    background:#ef4444;
+}
+
+.task-dot.medium{
+    background:#facc15;
+}
+
+.task-dot.low{
+    background:#22c55e;
+}
+
+.task-left h5{
+    color:var(--text);
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:3px;
+}
+
+.task-left p{
+    color:var(--text2);
+    font-size:13px;
+}
+
+/* ======================================================
+                    STATUS
+====================================================== */
+
+.calendar-status{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.calendar-status.pending{
+    background:rgba(245,158,11,.15);
+    color:#f59e0b;
+}
+
+.calendar-status.completed{
+    background:rgba(34,197,94,.15);
+    color:#22c55e;
+}
+
+.calendar-status.in-progress{
+    background:rgba(37,99,235,.15);
+    color:#2563eb;
+}
+
+body.dark .calendar-status.pending{
+    background:#78350f;
+}
+
+body.dark .calendar-status.completed{
+    background:#14532d;
+}
+
+body.dark .calendar-status.in-progress{
+    background:#1e3a8a;
+}
+
+/* ======================================================
+                  MORE BUTTON
+====================================================== */
+
+.show-more-btn{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    border-radius:12px;
+    border:none;
+    background:var(--primary);
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.show-more-btn:hover{
+    background:var(--primary-hover);
+}
+
+body.dark .show-more-btn{
+    background:#2563eb;
+}
+
+body.dark .show-more-btn:hover{
+    background:#3b82f6;
+}
+
+/* ======================================================
+                  NO EVENTS
+====================================================== */
+
+.no-events{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:30px 0;
+    color:var(--text2);
+    gap:10px;
+}
+
+.no-events span{
+    font-size:34px;
+}
+
+.no-events p{
+    font-size:14px;
+}
+
+/* ======================================================
+                  RESPONSIVE
+====================================================== */
+
+@media(max-width:768px){
+
+.calendar-card{
+    padding:18px;
+}
+
+.calendar-card h3{
+    font-size:20px;
+}
+
+.react-calendar__tile{
+    height:42px;
+    font-size:13px;
+}
+
+.events-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.calendar-task{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.calendar-status{
+    align-self:flex-start;
+}
+
+}

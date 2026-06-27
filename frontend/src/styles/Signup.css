@@ -1,0 +1,254 @@
+/* ================= PAGE ================= */
+
+.signup-page{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:24px;
+
+    background:linear-gradient(135deg,var(--bg),var(--hero-start));
+
+}
+
+/* ================= CARD ================= */
+
+.signup-card{
+
+    width:100%;
+    max-width:400px;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ================= LOGO ================= */
+
+.signup-logo{
+
+    width:56px;
+    height:56px;
+
+    margin:0 auto 18px;
+
+    border-radius:14px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:24px;
+
+}
+
+/* ================= HEADING ================= */
+
+.signup-card h1{
+
+    font-size:26px;
+
+    text-align:center;
+
+    color:var(--text);
+
+    margin-bottom:8px;
+
+}
+
+.signup-card p{
+
+    text-align:center;
+
+    color:var(--text2);
+
+    font-size:14px;
+
+    margin-bottom:26px;
+
+}
+
+/* ================= INPUT ================= */
+
+.input-group{
+
+    margin-bottom:16px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+    margin-bottom:7px;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:12px 14px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-size:14px;
+
+    transition:.25s;
+
+}
+
+.input-group input::placeholder{
+
+    color:var(--text2);
+
+}
+
+.input-group input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.12);
+
+}
+
+/* ================= BUTTON ================= */
+
+.signup-btn{
+
+    width:100%;
+
+    margin-top:8px;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.signup-btn:hover{
+
+    background:var(--primary-hover);
+
+}
+
+/* ================= DIVIDER ================= */
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    margin:22px 0;
+
+    color:var(--text2);
+
+    font-size:13px;
+
+}
+
+.divider::before,
+.divider::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:var(--border);
+
+}
+
+.divider span{
+
+    padding:0 12px;
+
+}
+
+/* ================= FOOTER ================= */
+
+.bottom-text{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:var(--text2);
+
+}
+
+.bottom-text a{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+.bottom-text a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:500px){
+
+.signup-page{
+
+    padding:16px;
+
+}
+
+.signup-card{
+
+    padding:24px;
+
+}
+
+.signup-card h1{
+
+    font-size:22px;
+
+}
+
+}

@@ -1,0 +1,347 @@
+/* ===================================
+        CARD
+=================================== */
+
+.upcoming-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    box-shadow:var(--shadow);
+
+    min-height:400px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:.3s;
+
+}
+
+.upcoming-card:hover{
+
+    border-color:var(--primary);
+
+}
+
+/* ===================================
+        HEADER
+=================================== */
+
+.upcoming-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.upcoming-header h2{
+
+    color:var(--text);
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:5px;
+
+}
+
+.upcoming-header p{
+
+    color:var(--text2);
+
+    font-size:14px;
+
+}
+
+/* ===================================
+      VIEW ALL BUTTON
+=================================== */
+
+.view-all-btn{
+
+    padding:10px 18px;
+
+    background:rgba(37,99,235,.10);
+
+    color:var(--primary);
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.view-all-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+body.dark .view-all-btn{
+
+    background:#1e293b;
+
+    color:#60a5fa;
+
+}
+
+body.dark .view-all-btn:hover{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+/* ===================================
+        TASK LIST
+=================================== */
+
+.upcoming-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+/* ===================================
+        TASK
+=================================== */
+
+.upcoming-task{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    border:1px solid var(--border);
+
+    background:var(--card-hover);
+
+    transition:.25s;
+
+}
+
+.upcoming-task:hover{
+
+    transform:translateY(-2px);
+
+    border-color:var(--primary);
+
+}
+
+body.dark .upcoming-task{
+
+    background:#1e293b;
+
+}
+
+body.dark .upcoming-task:hover{
+
+    background:#334155;
+
+}
+
+/* ===================================
+        LEFT
+=================================== */
+
+.task-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.task-info h4{
+
+    color:var(--text);
+
+    font-size:16px;
+
+    font-weight:600;
+
+    margin-bottom:4px;
+
+}
+
+.task-info p{
+
+    color:var(--text2);
+
+    font-size:13px;
+
+}
+
+/* ===================================
+      PRIORITY DOT
+=================================== */
+
+.priority-dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+}
+
+.priority-dot.high{
+
+    background:#ef4444;
+
+}
+
+.priority-dot.medium{
+
+    background:#f59e0b;
+
+}
+
+.priority-dot.low{
+
+    background:#22c55e;
+
+}
+
+/* ===================================
+      DATE
+=================================== */
+
+.task-date{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--text2);
+
+    font-size:14px;
+
+}
+
+/* ===================================
+      EMPTY
+=================================== */
+
+.no-upcoming{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.no-upcoming span{
+
+    font-size:55px;
+
+    margin-bottom:18px;
+
+}
+
+.no-upcoming h3{
+
+    color:var(--text);
+
+    margin-bottom:8px;
+
+}
+
+.no-upcoming p{
+
+    color:var(--text2);
+
+}
+
+/* ===================================
+      RESPONSIVE
+=================================== */
+
+@media(max-width:768px){
+
+.upcoming-card{
+
+    min-height:auto;
+
+    padding:18px;
+
+}
+
+.upcoming-header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+}
+
+.view-all-btn{
+
+    width:100%;
+
+}
+
+.upcoming-task{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+}
+
+.task-date{
+
+    align-self:flex-start;
+
+}
+
+}

@@ -1,0 +1,141 @@
+.calendar-modal-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(5px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.calendar-modal{
+
+    width:420px;
+
+    max-width:95%;
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.calendar-modal-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.calendar-modal-header h2{
+
+    color:var(--text);
+
+    font-size:22px;
+
+}
+
+.calendar-modal-header button{
+
+    background:none;
+
+    font-size:22px;
+
+    color:var(--text);
+
+}
+
+.calendar-task-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px;
+
+    margin-bottom:12px;
+
+    background:var(--card-hover);
+
+    border-radius:12px;
+
+}
+
+.calendar-task-item h4{
+
+    color:var(--text);
+
+    margin-bottom:4px;
+
+}
+
+.calendar-task-item p{
+
+    color:var(--text2);
+
+    font-size:13px;
+
+}
+
+.calendar-priority{
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    color:#fff;
+
+    font-size:12px;
+
+}
+
+.calendar-priority.high{
+
+    background:#ef4444;
+
+}
+
+.calendar-priority.medium{
+
+    background:#f59e0b;
+
+}
+
+.calendar-priority.low{
+
+    background:#22c55e;
+
+}
+
+.calendar-empty{
+
+    padding:50px;
+
+    text-align:center;
+
+    color:var(--text2);
+
+}

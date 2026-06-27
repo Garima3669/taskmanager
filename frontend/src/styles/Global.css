@@ -1,0 +1,137 @@
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= LIGHT THEME ================= */
+
+:root {
+
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --card-hover: #f8fafc;
+
+    --text: #111827;
+    --text2: #6b7280;
+
+    --border: #e5e7eb;
+
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+
+    --shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+    --hero-start: #2563eb;
+    --hero-end: #3b82f6;
+    --hero-text: #ffffff;
+
+}
+
+/* ================= DARK THEME ================= */
+
+body.dark {
+
+    --bg: #0f172a;
+    --card: #1e293b;
+    --card-hover: #273549;
+
+    --text: #f8fafc;
+    --text2: #cbd5e1;
+
+    --border: #334155;
+
+    --primary: #3b82f6;
+    --primary-hover: #60a5fa;
+
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+
+    --shadow: 0 10px 25px rgba(0, 0, 0, .35);
+
+    --hero-start: #1e3a8a;
+    --hero-end: #2563eb;
+    --hero-text: #ffffff;
+
+
+}
+
+/* ================= BODY ================= */
+
+body {
+
+    background: var(--bg);
+    color: var(--text);
+
+    transition:
+        background .3s ease,
+        color .3s ease;
+
+}
+
+/* ================= LINKS ================= */
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+
+}
+
+/* ================= BUTTON ================= */
+
+button {
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+/* ================= INPUTS ================= */
+
+input,
+select,
+textarea {
+
+    border: none;
+    outline: none;
+
+    font-size: 16px;
+
+    background: var(--card);
+    color: var(--text);
+
+    transition: .3s;
+
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+
+    width: 90%;
+    max-width: 1400px;
+
+    margin: auto;
+
+}
+
+/* ================= PAGE ================= */
+
+.page {
+
+    min-height: 100vh;
+    padding: 30px;
+
+}

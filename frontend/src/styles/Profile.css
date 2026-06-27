@@ -1,0 +1,373 @@
+/* ===================================
+            PROFILE PAGE
+=================================== */
+
+.profile-page{
+    padding:24px;
+    background:var(--bg);
+    min-height:100vh;
+}
+
+/* ===================================
+              TITLE
+=================================== */
+
+.profile-title{
+    color:var(--text);
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:24px;
+}
+
+/* ===================================
+          TOP SECTION
+=================================== */
+
+.profile-top{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:22px;
+    margin-bottom:24px;
+}
+
+/* ===================================
+          PROFILE CARD
+=================================== */
+
+.profile-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:28px;
+    text-align:center;
+    transition:.25s;
+}
+
+.profile-card:hover{
+    border-color:var(--primary);
+}
+
+.profile-avatar{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.avatar-logo{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(135deg,#2563eb,#60a5fa);
+
+    color:#fff;
+
+    font-size:54px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    box-shadow:0 15px 35px rgba(37,99,235,.3);
+
+    user-select:none;
+}
+
+.profile-card h2{
+    color:var(--text);
+    margin-bottom:6px;
+    font-size:24px;
+}
+
+.profile-card p{
+    color:var(--text2);
+    font-size:15px;
+}
+
+/* ===================================
+          STATS CARD
+=================================== */
+
+.stats-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:26px;
+}
+
+.stats-card h2{
+    color:var(--text);
+    margin-bottom:24px;
+}
+
+.profile-stat{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    padding:16px;
+
+    margin-bottom:14px;
+
+    border-radius:14px;
+
+    background:var(--card-hover);
+
+    transition:.25s;
+}
+
+.profile-stat:hover{
+    transform:translateY(-2px);
+}
+
+body.dark .profile-stat{
+    background:#1e293b;
+}
+
+body.dark .profile-stat:hover{
+    background:#334155;
+}
+
+.profile-stat svg{
+    color:var(--primary);
+    font-size:18px;
+}
+
+.profile-stat span{
+    color:var(--text);
+    flex:1;
+    font-weight:500;
+}
+
+.profile-stat strong{
+    color:var(--primary);
+    font-size:17px;
+}
+
+/* ===================================
+            FORM
+=================================== */
+
+.profile-form{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    padding:28px;
+}
+
+.profile-form h2{
+    color:var(--text);
+    margin-bottom:24px;
+}
+
+/* ===================================
+           GRID
+=================================== */
+
+.profile-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+/* ===================================
+        INPUT GROUP
+=================================== */
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    color:var(--text);
+    font-weight:600;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+.input-group textarea{
+    resize:none;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+/* ===================================
+          SAVE BUTTON
+=================================== */
+
+.save-btn{
+
+    margin-top:12px;
+
+    width:220px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.save-btn:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-2px);
+
+}
+
+/* ===================================
+          DARK MODE
+=================================== */
+
+body.dark .profile-card,
+body.dark .stats-card,
+body.dark .profile-form{
+
+    background:var(--card);
+
+}
+
+body.dark .input-group input,
+body.dark .input-group textarea,
+body.dark .input-group select{
+
+    background:#0f172a;
+
+}
+
+body.dark .save-btn:hover{
+
+    background:#3b82f6;
+
+}
+
+/* ===================================
+          RESPONSIVE
+=================================== */
+
+@media(max-width:992px){
+
+.profile-top{
+
+    grid-template-columns:1fr;
+
+}
+
+.profile-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.profile-page{
+
+    padding:18px;
+
+}
+
+.profile-card,
+.stats-card,
+.profile-form{
+
+    padding:22px;
+
+}
+
+.profile-title{
+
+    font-size:28px;
+
+}
+
+.save-btn{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.profile-page{
+
+    padding:14px;
+
+}
+
+.profile-avatar{
+
+    width:100px;
+    height:100px;
+
+}
+
+.profile-card h2{
+
+    font-size:22px;
+
+}
+
+.profile-title{
+
+    font-size:24px;
+
+}
+
+}
